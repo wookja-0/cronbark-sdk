@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cronbark"
+version = "0.0.1"
+description = "CronBark Python SDK & CLI — 크론잡 모니터링을 위한 간편 연동 도구"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "CronBark Team"}]
+dependencies = [
+    "httpx>=0.25.0",
+    "click>=8.0.0",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+]
+
+[project.scripts]
+cronbark = "cronbark.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/wookja-0/cronbark-sdk"
+Repository = "https://github.com/wookja-0/cronbark-sdk"
+Issues = "https://github.com/wookja-0/cronbark-sdk/issues"
+Documentation = "https://cronbark.com/docs"
+
+[tool.setuptools.packages.find]
+include = ["cronbark*"]
+
+[tool.ruff]
+# 초기 릴리스 — 느슨한 설정, 나중에 조일 수 있음
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+# pycodestyle/pyflakes 기본만, 노이즈 규칙 제외
+select = ["E", "F", "W"]
+ignore = [
+    "E501",  # line too long (line-length 로 제어)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]  # 재수출 허용
+"tests/*" = ["F401", "F811"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
