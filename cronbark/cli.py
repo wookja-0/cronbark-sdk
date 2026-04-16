@@ -22,7 +22,16 @@ import sys
 
 import click
 
-from cronbark.client import configure, fail, ping, start, success, tick
+from cronbark.client import (
+    USER_AGENT_CLI,
+    _set_user_agent,
+    configure,
+    fail,
+    ping,
+    start,
+    success,
+    tick,
+)
 
 
 @click.group()
@@ -35,6 +44,8 @@ from cronbark.client import configure, fail, ping, start, success, tick
 def main(url: str):
     """CronBark CLI - 크론잡 모니터링 도구"""
     configure(base_url=url)
+    # 실행 이력에 "CLI" 배지로 분류되도록 User-Agent 를 CLI 전용으로 설정
+    _set_user_agent(USER_AGENT_CLI)
 
 
 @main.command(name="ping")

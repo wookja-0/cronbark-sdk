@@ -11,12 +11,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- All HTTP requests now send a `User-Agent` header:
+  `cronbark-sdk/<version>` from the Python SDK, and `cronbark-cli/<version>`
+  when invoked via the `cronbark` CLI entrypoint. The CronBark backend uses
+  this header to distinguish SDK vs CLI executions in the dashboard execution
+  history (source badges).
+
 ### Changed
 - Renamed `api_key` parameter and `CRONBARK_API_KEY` env var to `token` and
   `CRONBARK_TOKEN` for terminology consistency with the backend (`api_tokens`
   table) and dashboard UI.
 
-### Added
+### Added (initial release)
 - Initial public preview of the CronBark Python SDK and `cronbark` CLI.
 - `cronbark.configure()` for setting the API token, base URL, and request timeout.
 - `cronbark.monitor()` context manager for automatic start/success/fail reporting.
