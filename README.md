@@ -122,7 +122,7 @@ will never break your job.
 ## Links
 
 - Website: [cronbark.com](https://cronbark.com)
-- Documentation: [cronbark.com/docs](https://cronbark.com/docs) _(coming soon)_
+- Documentation: [docs.cronbark.com](https://docs.cronbark.com)
 - Issues: [github.com/wookja-0/cronbark-sdk/issues](https://github.com/wookja-0/cronbark-sdk/issues)
 
 ## License
