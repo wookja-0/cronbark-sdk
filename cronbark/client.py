@@ -5,6 +5,7 @@ HTTP API를 래핑하여 간편한 크론잡 모니터링을 제공한다.
 
 import functools
 import os
+import socket
 import sys
 import traceback
 from contextlib import contextmanager
@@ -102,8 +103,8 @@ def ping(token: Optional[str] = None) -> dict:
 
 
 def start(token: Optional[str] = None) -> dict:
-    """실행 시작을 알린다."""
-    return _send(_get_token(token), "start")
+    """실행 시작을 알린다. 실행 호스트명을 함께 보고한다."""
+    return _send(_get_token(token), "start", {"hostname": socket.gethostname()})
 
 
 def success(
