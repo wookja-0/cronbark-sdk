@@ -9,8 +9,15 @@ def test_import():
 
 
 def test_version():
-    """버전이 예상 값과 일치하는지 확인."""
-    assert cronbark.__version__ == "0.0.1"
+    """__version__ 이 설치된 패키지 메타데이터 버전과 일치하는지 확인.
+
+    특정 숫자를 하드코딩하지 않으므로 릴리스마다 깨지지 않는다.
+    동시에 __init__.py 의 __version__ 과 pyproject.toml 의 version 이
+    어긋나면(둘 중 하나만 올리면) 실패하여 드리프트를 잡아준다.
+    """
+    from importlib.metadata import version
+
+    assert cronbark.__version__ == version("cronbark")
 
 
 def test_public_api():
