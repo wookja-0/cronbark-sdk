@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cronbark"
-version = "0.0.1"
+version = "0.1.0"
 description = "CronBark Python SDK & CLI — 크론잡 모니터링을 위한 간편 연동 도구"
 readme = "README.md"
 requires-python = ">=3.9"

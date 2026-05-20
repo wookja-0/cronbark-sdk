@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > change in backwards-incompatible ways between minor versions until 1.0 is
 > released.
 
-## [Unreleased]
+## [0.1.0] - 2026-05-20
 
 ### Added
 - All HTTP requests now send a `User-Agent` header:
@@ -23,7 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `CRONBARK_TOKEN` for terminology consistency with the backend (`api_tokens`
   table) and dashboard UI.
 
-### Added (initial release)
+## [0.0.1] - 2026-04-14
+
+### Added
 - Initial public preview of the CronBark Python SDK and `cronbark` CLI.
 - `cronbark.configure()` for setting the API token, base URL, and request timeout.
 - `cronbark.monitor()` context manager for automatic start/success/fail reporting.
@@ -34,4 +36,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Default API base URL set to `https://api.cronbark.com` (override via
   `CRONBARK_URL` environment variable).
 
-[Unreleased]: https://github.com/wookja-0/cronbark-sdk/compare/HEAD...HEAD
+[0.1.0]: https://github.com/wookja-0/cronbark-sdk/compare/v0.0.1...v0.1.0
+[0.0.1]: https://github.com/wookja-0/cronbark-sdk/releases/tag/v0.0.1
