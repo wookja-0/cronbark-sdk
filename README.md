@@ -1,5 +1,7 @@
 # CronBark Python SDK
 
+[![PyPI](https://img.shields.io/pypi/v/cronbark)](https://pypi.org/project/cronbark/) [![Python](https://img.shields.io/pypi/pyversions/cronbark)](https://pypi.org/project/cronbark/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
 Python SDK and CLI for [CronBark](https://cronbark.com) — monitor any cron job
 with a single decorator.
 
