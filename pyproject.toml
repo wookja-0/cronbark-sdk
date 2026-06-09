@@ -38,7 +38,7 @@ cronbark = "cronbark.cli:main"
 Homepage = "https://github.com/wookja-0/cronbark-sdk"
 Repository = "https://github.com/wookja-0/cronbark-sdk"
 Issues = "https://github.com/wookja-0/cronbark-sdk/issues"
-Documentation = "https://cronbark.com/docs"
+Documentation = "https://docs.cronbark.com"
 
 [tool.setuptools.packages.find]
 include = ["cronbark*"]
